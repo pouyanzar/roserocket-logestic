@@ -36,5 +36,13 @@ module.exports = (db) => {
       })
       .catch(err => res.send(err));
   });
+
+  router.post('/unassign', (req, res) => {
+    const {orderId} = req.body;
+    db.query(`UPDATE orders SET driver_id = NULL WHERE id = $4 RETURNING *`, [orderId])
+      .then(res.send("Order assigned!"))
+      .catch(err => res.send(err));
+  });
+   
   return router;
 };
