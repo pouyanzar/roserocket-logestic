@@ -4,7 +4,7 @@ const router = express.Router();
 module.exports = (db) => {
 
   router.get('/', (req, res) => {
-    db.query('SELECT * FROM orders JOIN drivers ON drivers.id = driver_id')
+    db.query('SELECT orders.id, description, cost, revenue, driver_id, drivers.name FROM orders JOIN drivers ON drivers.id = driver_id')
       .then(data => res.json(data.rows))
       .catch(err => res.send(err));
   });
