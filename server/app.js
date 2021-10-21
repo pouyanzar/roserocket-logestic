@@ -10,6 +10,7 @@ const db = new Pool({connectionString, ssl: {
 
 const indexRouter = require('./routes/index');
 const driversRouter = require('./routes/drivers');
+const ordersRouter = require('./routes/orders');
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/drivers', driversRouter(db));
+app.use('/orders', ordersRouter(db));
 
 module.exports = app;
