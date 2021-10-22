@@ -43,6 +43,14 @@ module.exports = (db) => {
       .then(res.send("Order assigned!"))
       .catch(err => res.send(err));
   });
+
+  router.post('/edit/:id', (req, res) => {
+    const {cost, revenue, id} = req.body;
+    console.log(cost, revenue, id);
+    db.query(`UPDATE orders SET cost = $1, revenue = $2 WHERE id = $3`, [cost, revenue, id])
+      .then(res.send("cost and revenue updated!"))
+      .catch(err => res.send(err));
+  });
    
   return router;
 };
