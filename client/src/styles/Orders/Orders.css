@@ -18,10 +18,13 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .orders-title h2 {
-  margin: 0 1.2rem;
+  margin-right: 2.7rem;
 }
 
 .order {
@@ -33,13 +36,16 @@ h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-}
-
-.order div:nth-child(2) {
-  color: green;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .order div:nth-child(3) {
+  color: green;
+}
+
+.order div:nth-child(4) {
   color: red;
 }
 
@@ -49,5 +55,9 @@ h2 {
 
 .order h2 {
   border-bottom: 1px #000 solid;
+}
+
+.order button {
+  border: 0;
 }
 /*# sourceMappingURL=Orders.css.map */

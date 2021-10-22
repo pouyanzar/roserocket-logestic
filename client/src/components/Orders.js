@@ -11,7 +11,7 @@ export default function Orders(props) {
         <h2>Revenue</h2>
         <h2>cost</h2>
       </div>
-      { orders.map(order => <Order order={order} />) }
+      { orders.map(order => <Order order={order} key={order.id}/>) }
     </div>
   )
   

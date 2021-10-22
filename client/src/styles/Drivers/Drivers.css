@@ -38,7 +38,8 @@ h2 {
           flex-direction: row;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  margin: .5rem;
+  margin: .5rem 0;
+  padding: .2rem 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -51,11 +52,11 @@ h2 {
   margin: 0 1rem;
 }
 
-.driver-order__item div:nth-child(2) {
+.driver-order__item div:nth-child(3) {
   color: green;
 }
 
-.driver-order__item div:nth-child(3) {
+.driver-order__item div:nth-child(4) {
   color: red;
 }
 

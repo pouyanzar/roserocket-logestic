@@ -21,6 +21,7 @@ export default function Driver(props) {
           {
             orders.map(order => (
               <div className="driver-order__item"> 
+                <div><i class="fas fa-grip-lines"></i></div>
                 <div className="col-4">{order.description}</div>
                 <div className="col-2"><span>$</span>{order.revenue}</div>
                 <div className="col-2"><span>$</span>{order.cost}</div>
