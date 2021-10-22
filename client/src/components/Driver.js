@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import '../styles/Drivers/Drivers.css';
 
 export default function Driver(props) {
 
@@ -13,17 +14,17 @@ export default function Driver(props) {
   }, [])
   console.log(orders)
   return (
-    <div>
+    <div className="driver">
       <h2>Driver {name}</h2>
-      <div>
+      <div className="driver-order">
            
           {
             orders.map(order => (
-              <> 
+              <div className="driver-order__item"> 
                 <div>{order.description}</div>
-                <div>{order.revenue}</div>
-                <div>{order.cost}</div>
-              </>
+                <div><span>$</span>{order.revenue}</div>
+                <div><span>$</span>{order.cost}</div>
+              </div>
             ))
           }
           

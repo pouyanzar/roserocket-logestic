@@ -1,0 +1,45 @@
+h2 {
+  font-size: 1em;
+}
+
+.orders {
+  width: 30%;
+  border: 1px #000 solid;
+  margin: 2rem;
+  margin-right: 1rem;
+
+  &-unassigned {
+    background-color: rgba(0, 0, 0, 0.082);
+    border-bottom: 1px #000 solid;
+    padding: .5rem 2rem;
+
+  }
+  &-title {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.order {
+  border: 1px #000 solid;
+  margin: .5rem;
+  display: flex;
+  justify-content: space-around;
+
+  & div:nth-child(2) {
+    color: green;
+  }
+
+  & div:nth-child(3) {
+    color: red;
+  }
+
+  & span {
+    color: #000;
+  }
+  
+  & h2 {
+    border-bottom: 1px #000 solid;
+  }
+}
+

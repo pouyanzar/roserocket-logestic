@@ -1,0 +1,51 @@
+h2 {
+  font-size: 1em;
+}
+
+.orders {
+  width: 30%;
+  border: 1px #000 solid;
+  margin: 2rem;
+  margin-right: 1rem;
+}
+
+.orders-unassigned {
+  background-color: rgba(0, 0, 0, 0.082);
+  border-bottom: 1px #000 solid;
+  padding: .5rem 2rem;
+}
+
+.orders-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.order {
+  border: 1px #000 solid;
+  margin: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.order div:nth-child(2) {
+  color: green;
+}
+
+.order div:nth-child(3) {
+  color: red;
+}
+
+.order span {
+  color: #000;
+}
+
+.order h2 {
+  border-bottom: 1px #000 solid;
+}
+/*# sourceMappingURL=Orders.css.map */

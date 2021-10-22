@@ -1,5 +1,5 @@
 export default function Order(props) {
-  
+
   const {description, revenue, cost} = props.order;
 
   const submitHandler = (revenue, cost) => {
@@ -13,10 +13,10 @@ export default function Order(props) {
   if (revenue) {
     if (cost) {
       return (
-        <div>
+        <div className="order">
           <div>{description}</div>
-          <div>${revenue}</div>
-          <div>${cost}</div>
+          <div><span>$</span>{revenue}</div>
+          <div><span>$</span>{cost}</div>
         </div>
       )
     } 
