@@ -6,7 +6,7 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 2rem;
+  height: 90vh;
 }
 
 .driver {
@@ -67,5 +67,6 @@ h2 {
   border-bottom: 1px #000 solid;
   padding: .5rem 2rem;
   background-color: rgba(0, 0, 0, 0.082);
+  text-align: center;
 }
 /*# sourceMappingURL=Drivers.css.map */

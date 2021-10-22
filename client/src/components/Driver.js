@@ -12,18 +12,18 @@ export default function Driver(props) {
       .then(data => setOrders(() => data.data))
       .catch(err => console.log(err));
   }, [])
-  console.log(orders)
+
   return (
-    <div className="driver">
+    <div className="driver col-5">
       <h2>Driver {name}</h2>
       <div className="driver-order">
            
           {
             orders.map(order => (
               <div className="driver-order__item"> 
-                <div>{order.description}</div>
-                <div><span>$</span>{order.revenue}</div>
-                <div><span>$</span>{order.cost}</div>
+                <div className="col-4">{order.description}</div>
+                <div className="col-2"><span>$</span>{order.revenue}</div>
+                <div className="col-2"><span>$</span>{order.cost}</div>
               </div>
             ))
           }

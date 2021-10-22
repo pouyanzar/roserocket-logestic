@@ -3,24 +3,25 @@ h2 {
 }
 
 .orders {
-  width: 30%;
   border: 1px #000 solid;
-  margin: 2rem;
-  margin-right: 1rem;
+  height: 90vh;
 }
 
 .orders-unassigned {
   background-color: rgba(0, 0, 0, 0.082);
   border-bottom: 1px #000 solid;
   padding: .5rem 2rem;
+  text-align: center;
 }
 
 .orders-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+}
+
+.orders-title h2 {
+  margin: 0 1.2rem;
 }
 
 .order {
@@ -29,8 +30,9 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .order div:nth-child(2) {

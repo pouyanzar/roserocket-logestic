@@ -14,9 +14,10 @@ export default function Order(props) {
     if (cost) {
       return (
         <div className="order">
-          <div>{description}</div>
-          <div><span>$</span>{revenue}</div>
-          <div><span>$</span>{cost}</div>
+          <div className="col-2">{description}</div>
+          <div className="col-2"><span>$</span>{revenue}</div>
+          <div className="col-2"><span>$</span>{cost}</div>
+          <div className="col-2"><i class="fas fa-pen"></i></div>
         </div>
       )
     } 

@@ -9,7 +9,7 @@ function App() {
   const [drivers, setDrivers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/orders')
+    axios.get('http://localhost:3000/orders/unassigned')
     .then(data => setOrders(data.data))
     .catch(err => console.log(err))
   }, [])

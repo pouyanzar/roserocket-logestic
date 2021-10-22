@@ -4,7 +4,7 @@ import '../styles/Orders/Orders.css';
 export default function UnassignedOrder(props) {
   const {orders} = props;
   return (
-    <div className="orders">
+    <div className="orders col-3 m-4">
       <h2 className="orders-unassigned">Unassigned Orders</h2>
       <div className="orders-title">
         <h2>Description</h2>
