@@ -1,23 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState, useEffect} from 'react';
+import UnassignedOrders from './components/UnassignedOrder';
+import Drivers from './components/Drivers';
+import axios from 'axios';
 
 function App() {
+  const [orders, setOrders] = useState([]);
+  const [drivers, setDrivers] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/orders')
+    .then(data => setOrders(data.data))
+    .catch(err => console.log(err))
+  }, [])
+  useEffect(() => {
+    axios.get('http://localhost:3000/drivers')
+    .then(data => setDrivers(data.data))
+    .catch(err => console.log(err))
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <UnassignedOrders orders={orders}/>
+      <Drivers drivers={drivers} />
     </div>
   );
 }
