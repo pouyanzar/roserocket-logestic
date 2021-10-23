@@ -19,7 +19,7 @@ export default function Driver(props) {
         <h2>Driver {name}</h2>
         <Droppable droppableId={`${id.toString()}`}>
           {(provided) => (
-            <div className="driver-order"
+            <div className="driver-order droppable"
               ref={provided.innerRef} 
               {...provided.droppableProps}
             >

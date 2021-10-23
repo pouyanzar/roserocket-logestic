@@ -2,6 +2,10 @@ h2 {
   font-size: 1em;
 }
 
+.droppable {
+  height: 100vh;
+}
+
 .orders {
   border: 1px #000 solid;
   font-size: .5em;
@@ -100,7 +104,7 @@ h2 {
   .orders {
     width: 80%;
     height: 70%;
-    margin: 80vh 2rem 1rem 2rem !important;
+    margin: 50vh 2rem 1rem 2rem !important;
   }
 }
 /*# sourceMappingURL=Orders.css.map */

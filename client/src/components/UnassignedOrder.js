@@ -15,6 +15,7 @@ export default function UnassignedOrder(props) {
       <Droppable droppableId="unassigned">
         {(provided) => (
           <div
+            className="droppable"
             ref={provided.innerRef} 
             {...provided.droppableProps}
           >
