@@ -8,6 +8,7 @@ h2 {
   border: 1px #000 solid;
   font-size: .5em;
   height: 90vh;
+  min-width: 400px;
   &-unassigned {
     background-color: rgba(0, 0, 0, 0.082);
     border-bottom: 1px #000 solid;
@@ -21,10 +22,11 @@ h2 {
     align-items: center;
 
     & h2:nth-child(2) {
-      margin-left: 2rem;
+      margin-left: 4.5rem;
     }
+    
     & h2:nth-child(3) {
-      margin-left: .3rem;
+      margin-left: 1rem;
     }
 
     & h2 {
@@ -47,7 +49,7 @@ h2 {
 
   & div:nth-child(4) {
     color: red;
-    margin:0 .3rem;
+    margin:0 1rem;
   }
 
   & span {
@@ -61,32 +63,14 @@ h2 {
   & button {
     border: 0;
   }
-
 }
 
-@media screen and (max-width: 1000px) {
-  .orders {
-    &-title {
-       & h2:nth-child(2) {
-        margin-left: .3rem;
-      }
-      & h2:nth-child(3) {
-        margin-left: 0;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .orders {
-    margin-right: .5rem !important;
-
-    & > div {
-      margin: 0 .1rem;
-    }
-  }
-  .order {
-    margin: .3rem .1rem;
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & input:first-child {
+    margin-left: 4rem;
   }
 }
 
@@ -94,7 +78,6 @@ h2 {
   .orders {
     width: 80%;
     height: auto;
-    // margin-top: 80vh !important;
     margin: 60vh 2rem 1rem 2rem !important; 
   }
    .input {

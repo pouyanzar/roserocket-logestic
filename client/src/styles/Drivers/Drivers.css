@@ -73,18 +73,6 @@ h2 {
   text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-  .driver {
-    margin-right: .5rem !important;
-  }
-  .driver > div {
-    margin: .1rem;
-  }
-  .driver-order__item {
-    margin: .3rem;
-  }
-}
-
 @media screen and (max-width: 750px) {
   .drivers {
     -webkit-box-orient: vertical;

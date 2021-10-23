@@ -10,6 +10,7 @@ h2 {
   border: 1px #000 solid;
   font-size: .5em;
   height: 90vh;
+  min-width: 400px;
 }
 
 .orders-unassigned {
@@ -32,11 +33,11 @@ h2 {
 }
 
 .orders-title h2:nth-child(2) {
-  margin-left: 2rem;
+  margin-left: 4.5rem;
 }
 
 .orders-title h2:nth-child(3) {
-  margin-left: .3rem;
+  margin-left: 1rem;
 }
 
 .orders-title h2 {
@@ -64,7 +65,7 @@ h2 {
 
 .order div:nth-child(4) {
   color: red;
-  margin: 0 .3rem;
+  margin: 0 1rem;
 }
 
 .order span {
@@ -79,25 +80,20 @@ h2 {
   border: 0;
 }
 
-@media screen and (max-width: 1000px) {
-  .orders-title h2:nth-child(2) {
-    margin-left: .3rem;
-  }
-  .orders-title h2:nth-child(3) {
-    margin-left: 0;
-  }
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (max-width: 800px) {
-  .orders {
-    margin-right: .5rem !important;
-  }
-  .orders > div {
-    margin: 0 .1rem;
-  }
-  .order {
-    margin: .3rem .1rem;
-  }
+form input:first-child {
+  margin-left: 4rem;
 }
 
 @media screen and (max-width: 750px) {

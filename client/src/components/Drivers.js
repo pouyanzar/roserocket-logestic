@@ -1,6 +1,7 @@
 import Driver from './Driver';
 import '../styles/Drivers/Drivers.css';
 
+//creates the list of drivers
 export default function Drivers(props) {
   const {drivers, orderChanged} = props;
   return (

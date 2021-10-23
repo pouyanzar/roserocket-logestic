@@ -23,14 +23,19 @@ function App() {
     .catch(err => console.log(err))
   }, []);
 
+  //checks and renders component based on drag and droping items
   const onDragEnd = result => {
     const {destination, source, draggableId} = result;
-    if (!destination) return;
+    if (!destination) return; //when item drag and droped to the same place
+
+    //checks if the task not be assigned to more then two drivers
     if (source.droppableId !== "unassigned" && 
         destination.droppableId !== "unassigned" &&
         destination.droppableId !== source.droppableId) {
       return alert("You have to unassign the task first!");
     }
+
+    //assigns a order to a driver upon drag and dropping
     if (source.droppableId === "unassigned" && destination.droppableId !== source.droppableId) {
       const driverId = destination.droppableId;
       const orderId = draggableId;
@@ -38,6 +43,8 @@ function App() {
         .then(() => setOrderChanged(prev => !prev))
         .catch(err => console.log(err));
     }
+
+    //unassignes the orders from drivers based on drag and drop
     if (destination.droppableId === "unassigned" && destination.droppableId !== source.droppableId) {
       const orderId = draggableId;
       return axios.post(`${SERVER_URL}/orders/unassign`, {orderId})
