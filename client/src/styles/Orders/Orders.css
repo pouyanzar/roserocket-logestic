@@ -103,7 +103,7 @@ h2 {
 @media screen and (max-width: 750px) {
   .orders {
     width: 80%;
-    height: 70%;
+    height: auto;
     margin: 50vh 2rem 1rem 2rem !important;
   }
 }

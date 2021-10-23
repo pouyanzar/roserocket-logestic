@@ -104,5 +104,8 @@ h2 {
     margin: 1rem 2rem !important;
     width: 80%;
   }
+  .droppable {
+    height: auto;
+  }
 }
 /*# sourceMappingURL=Drivers.css.map */
