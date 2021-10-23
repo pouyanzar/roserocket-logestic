@@ -14,8 +14,10 @@
 
 - driver id = 1
 - order id = 1
-- find order id inside orders table(array) 
+- orders.find(order id) 
 - update driver_id = 1 for the order 
+- orders.find(order id)
+- should return the order with driver_id = 1
 
 #### 3.1 Assign an order not to more than one driver
 
@@ -24,7 +26,10 @@
 - order id = 1
 - find the order inside orders table(array)
 - update driver_id = 1 for the order
-- update driver_id = 2 for the order should returns an error
+- orders.find(order id)
+- should return the order with driver_id = 1
+- update driver_id = 2 for the order
+- should returns an error
 
 
 #### 3.2 Unassign an order
