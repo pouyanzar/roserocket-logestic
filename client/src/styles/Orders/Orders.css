@@ -4,6 +4,7 @@ h2 {
 
 .orders {
   border: 1px #000 solid;
+  font-size: .5em;
   height: 90vh;
 }
 
@@ -21,15 +22,27 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.orders-title h2:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.orders-title h2:nth-child(3) {
+  margin-left: .3rem;
 }
 
 .orders-title h2 {
-  margin-right: 2.7rem;
+  margin: 0 1rem;
 }
 
 .order {
   border: 1px #000 solid;
   margin: .5rem;
+  padding: .3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +60,7 @@ h2 {
 
 .order div:nth-child(4) {
   color: red;
+  margin: 0 .3rem;
 }
 
 .order span {
@@ -59,5 +73,34 @@ h2 {
 
 .order button {
   border: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .orders-title h2:nth-child(2) {
+    margin-left: .3rem;
+  }
+  .orders-title h2:nth-child(3) {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .orders {
+    margin-right: .5rem !important;
+  }
+  .orders > div {
+    margin: 0 .1rem;
+  }
+  .order {
+    margin: .3rem .1rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .orders {
+    width: 80%;
+    height: 70%;
+    margin: 80vh 2rem 1rem 2rem !important;
+  }
 }
 /*# sourceMappingURL=Orders.css.map */

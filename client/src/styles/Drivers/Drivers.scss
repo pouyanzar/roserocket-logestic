@@ -8,8 +8,8 @@ h2 {
 
 .driver {
   border: 1px #000 solid;
-  margin-right: 1rem;
-  font-size: .8em;
+  margin-right: .7rem;
+  font-size: .5em;
   &-order {
     display: flex;
     flex-direction: column;
@@ -20,15 +20,13 @@ h2 {
       border: 1px #000 solid;
       display: flex;
       flex-direction: row;
-      flex-wrap: nowrap;
-      margin: .5rem 0;
-      padding: .2rem 0;
+      margin: .5rem .1rem;
+      padding: .2rem 1.2rem;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-evenly;
       
       & div {
-        margin: 0 1rem;
-
+        margin: 0 .2rem;
         &:nth-child(3){
           color: green;
         }
@@ -47,5 +45,35 @@ h2 {
     padding: .5rem 2rem;
     background-color: rgba(0, 0, 0, 0.082);
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .driver {
+    margin-right: .5rem !important;
+
+    & > div {
+      margin: .1rem;
+    }
+    &-order {
+      
+      &__item{
+        margin: .3rem; 
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .drivers {
+    flex-direction: column;
+    margin-top: 1rem !important;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .driver {
+    margin: 1rem 2rem !important;
+    width: 80%;
   }
 }
