@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import '../styles/Drivers/Drivers.css';
 import { Droppable, Draggable } from "react-beautiful-dnd";
+import {SERVER_URL} from '../serverInfo';
 
 export default function Driver(props) {
   const {orderChanged} = props;
@@ -9,7 +10,7 @@ export default function Driver(props) {
   const [orders, setOrders] = useState([]);
   
   useEffect(() => {
-    axios.get(`https://roserocket-logestic-server.herokuapp.com/drivers/${id}`)
+    axios.get(`${SERVER_URL}/drivers/${id}`)
       .then(data => setOrders(() => data.data))
       .catch(err => console.log(err));
   }, [orderChanged])

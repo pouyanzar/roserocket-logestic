@@ -4,6 +4,7 @@ import UnassignedOrders from './components/UnassignedOrder';
 import Drivers from './components/Drivers';
 import {DragDropContext} from 'react-beautiful-dnd';
 import axios from 'axios';
+import {SERVER_URL} from './serverInfo';
 
 function App() {
   const [orders, setOrders] = useState([]);
@@ -11,13 +12,13 @@ function App() {
   const [orderChanged, setOrderChanged] = useState(false);
 
   useEffect(() => {
-    axios.get('https://roserocket-logestic-server.herokuapp.com/orders/unassigned')
+    axios.get(`${SERVER_URL}/orders/unassigned`)
     .then(data => setOrders(data.data))
     .catch(err => console.log(err)) 
   }, [orderChanged]);
 
   useEffect(() => {
-    axios.get('https://roserocket-logestic-server.herokuapp.com/drivers')
+    axios.get(`${SERVER_URL}/drivers`)
     .then(data => setDrivers(data.data))
     .catch(err => console.log(err))
   }, []);
@@ -33,13 +34,13 @@ function App() {
     if (source.droppableId === "unassigned" && destination.droppableId !== source.droppableId) {
       const driverId = destination.droppableId;
       const orderId = draggableId;
-      return axios.post('https://roserocket-logestic-server.herokuapp.com/orders/assign', {orderId, driverId})
+      return axios.post(`${SERVER_URL}/orders/assign`, {orderId, driverId})
         .then(() => setOrderChanged(prev => !prev))
         .catch(err => console.log(err));
     }
     if (destination.droppableId === "unassigned" && destination.droppableId !== source.droppableId) {
       const orderId = draggableId;
-      return axios.post('https://roserocket-logestic-server.herokuapp.com/orders/unassign', {orderId})
+      return axios.post(`${SERVER_URL}/orders/unassign`, {orderId})
         .then(() => setOrderChanged(prev => !prev))
         .catch(err => console.log(err));
     }

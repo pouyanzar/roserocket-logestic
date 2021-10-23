@@ -48,20 +48,20 @@ export default function Order(props) {
         <div>
           <form onSubmit={e => submitHandler(e, editRevenue, editCost)}>
             <input 
-              type="text" 
+              type="number" 
               placeholder="revenue" 
               name="revenue" 
               value={editRevenue} 
               onChange={e => setEditRevenue(e.target.value)}
-              className="form-control-inline ms-4 col-3"
+              className="form-control-inline ms-4 col-3 input"
             />
             <input 
-              type="text" 
+              type="number" 
               placeholder="cost" 
               name="cost" 
               value={editCost} 
               onChange={e => setEditCost(e.target.value)}
-              className="form-control-inline ms-4 col-3"
+              className="form-control-inline ms-4 col-3 input"
             />
             <button type="submit" className="ms-1"><i className="fas fa-save"></i></button>
           </form>
