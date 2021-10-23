@@ -23,12 +23,12 @@ module.exports = (db) => {
   });
 
   router.post('/assign', (req, res) => {
-    const {orderId, driverId, cost, revenue} = req.body;
+    const {orderId, driverId} = req.body;
     db.query(`SELECT * FROM orders WHERE id = $1`, [orderId])
       .then(data => {
         if (data.rows[0]['driver_id'] === null) {
-          db.query(`UPDATE orders SET driver_id = $1, cost = $2, revenue = $3 WHERE id = $4 RETURNING *`, [driverId, cost, revenue,orderId])
-            .then(res.send("Order assigned!"))
+          db.query(`UPDATE orders SET driver_id = $1 WHERE id = $2 RETURNING *`, [driverId, orderId])
+            .then(data => res.send(data.rows[0]))
             .catch(err => res.send(err));
         } else {
           res.send("The order is already assigned!");
@@ -39,8 +39,8 @@ module.exports = (db) => {
 
   router.post('/unassign', (req, res) => {
     const {orderId} = req.body;
-    db.query(`UPDATE orders SET driver_id = NULL WHERE id = $4 RETURNING *`, [orderId])
-      .then(res.send("Order assigned!"))
+    db.query(`UPDATE orders SET driver_id = NULL WHERE id = $1 RETURNING *`, [orderId])
+      .then(data => res.send(data.rows[0]))
       .catch(err => res.send(err));
   });
 

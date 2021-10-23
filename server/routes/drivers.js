@@ -5,7 +5,7 @@ const router = express.Router();
 module.exports = (db) => {
 
   router.get('/', function(req, res) {
-    db.query('SELECT * FROM drivers')
+    db.query('SELECT * FROM drivers LIMIT 2')
       .then(data => res.send(data.rows))
       .catch(err => res.send(err));
   });
