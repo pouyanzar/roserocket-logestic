@@ -9,7 +9,7 @@ export default function Driver(props) {
   const [orders, setOrders] = useState([]);
   
   useEffect(() => {
-    axios.get(`http://localhost:3000/drivers/${id}`)
+    axios.get(`https://roserocket-logestic-server.herokuapp.com/drivers/${id}`)
       .then(data => setOrders(() => data.data))
       .catch(err => console.log(err));
   }, [orderChanged])

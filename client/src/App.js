@@ -11,13 +11,13 @@ function App() {
   const [orderChanged, setOrderChanged] = useState(false);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/orders/unassigned')
+    axios.get('https://roserocket-logestic-server.herokuapp.com/orders/unassigned')
     .then(data => setOrders(data.data))
     .catch(err => console.log(err)) 
   }, [orderChanged]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/drivers')
+    axios.get('https://roserocket-logestic-server.herokuapp.com/drivers')
     .then(data => setDrivers(data.data))
     .catch(err => console.log(err))
   }, []);
@@ -33,13 +33,13 @@ function App() {
     if (source.droppableId === "unassigned" && destination.droppableId !== source.droppableId) {
       const driverId = destination.droppableId;
       const orderId = draggableId;
-      return axios.post('http://localhost:3000/orders/assign', {orderId, driverId})
+      return axios.post('https://roserocket-logestic-server.herokuapp.com/orders/assign', {orderId, driverId})
         .then(() => setOrderChanged(prev => !prev))
         .catch(err => console.log(err));
     }
     if (destination.droppableId === "unassigned" && destination.droppableId !== source.droppableId) {
       const orderId = draggableId;
-      return axios.post('http://localhost:3000/orders/unassign', {orderId})
+      return axios.post('https://roserocket-logestic-server.herokuapp.com/orders/unassign', {orderId})
         .then(() => setOrderChanged(prev => !prev))
         .catch(err => console.log(err));
     }
