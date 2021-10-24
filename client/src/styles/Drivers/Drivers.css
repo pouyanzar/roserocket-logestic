@@ -10,12 +10,14 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 90vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .driver {
   border: 1px #000 solid;
-  margin-right: .7rem;
+  margin-right: .5rem;
   font-size: .5em;
 }
 
@@ -114,6 +116,23 @@ h2 {
   }
   .droppable {
     height: auto;
+  }
+  .addForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .addForm > div {
+    margin: 1rem 2rem;
+    min-width: 300px;
+  }
+  .addDriver {
+    margin: 2rem 5rem;
+    font-size: 1.5rem;
   }
 }
 /*# sourceMappingURL=Drivers.css.map */

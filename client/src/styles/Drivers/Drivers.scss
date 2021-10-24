@@ -7,12 +7,12 @@ h2 {
 }
 .drivers {
   display: flex;
-  height: 90vh;
+  justify-content: center;
 }
 
 .driver {
   border: 1px #000 solid;
-  margin-right: .7rem;
+  margin-right: .5rem;
   font-size: .5em;
   &-order {
     display: flex;
@@ -79,5 +79,17 @@ h2 {
   }
   .droppable{
     height: auto;
+  }
+  .addForm {
+    display: flex;
+    flex-direction: column;
+    & > div {
+      margin: 1rem 2rem;
+      min-width: 300px;
+    }  
+  }
+  .addDriver {
+    margin: 2rem 5rem;
+    font-size: 1.5rem;
   }
 }

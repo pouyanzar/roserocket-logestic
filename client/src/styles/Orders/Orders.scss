@@ -7,8 +7,9 @@ h2 {
 .orders {
   border: 1px #000 solid;
   font-size: .5em;
-  height: 90vh;
+  height: 80vh;
   min-width: 400px;
+  margin: 1.5rem 1rem;
   &-unassigned {
     background-color: rgba(0, 0, 0, 0.082);
     border-bottom: 1px #000 solid;

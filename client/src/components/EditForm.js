@@ -1,7 +1,6 @@
 //displays edit form for cost and revenue
 export default function EditForm(props) {
   const {submitHandler, editCost, editRevenue, setEditCost, setEditRevenue} = props;
-  
   return (
     <div>
         <form onSubmit={e => submitHandler(e, editRevenue, editCost)}>
@@ -21,7 +20,7 @@ export default function EditForm(props) {
             onChange={e => setEditCost(e.target.value)}
             className="form-control-inline col-3"
           />
-          <button type="submit"><i class="fas fa-save"></i></button>
+          <button type="submit"><i className="fas fa-save"></i></button>
         </form>
       </div>
   )
