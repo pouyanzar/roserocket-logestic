@@ -1,0 +1,10 @@
+.navbar{
+  background-color: lightskyblue;
+  margin: 1rem 2rem;
+  display: flex;
+  justify-content: space-around;
+
+  & a{
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,14 @@
+.navbar {
+  background-color: lightskyblue;
+  margin: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+/*# sourceMappingURL=navbar.css.map */
