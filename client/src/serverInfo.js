@@ -1,5 +1,3 @@
 module.exports =  {
-  SERVER_URL: 'http://localhost:3000'
+  SERVER_URL: 'https://roserocket-logestic-server.herokuapp.com'
 } 
-  
-// 'https://roserocket-logestic-server.herokuapp.com'
