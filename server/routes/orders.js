@@ -44,6 +44,13 @@ module.exports = (db) => {
       .catch(err => res.send(err));
   });
 
+  router.post('/add', (req, res) => {
+    let {description, cost, revenue} = req.body;
+    db.query(`INSERT INTO orders (description, cost, revenue) VALUES ($1, $2, $3)`, [description, cost, revenue])
+      .then(res => console.log("added"))
+      .catch(err => res.send(err));
+  });
+
   router.post('/edit/:id', (req, res) => {
     const {cost, revenue, id} = req.body;
     console.log(cost, revenue, id);

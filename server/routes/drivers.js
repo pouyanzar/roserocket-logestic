@@ -16,6 +16,13 @@ module.exports = (db) => {
       .then(data => res.send(data.rows))
       .catch(err => res.send(err));
   });
+
+  router.post('/add', (req, res) => {
+    const {name, insurance} = req.body;
+    db.query(`INSERT INTO drivers (name, insurance) VALUES ($1, $2)`, [name, insurance])
+      .then(res.send("Driver added!"))
+      .catch(err => res.send(err));
+  });
   
 
   return router;
