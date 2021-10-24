@@ -1,0 +1,1 @@
+- Drag and drop items freezes intermittently due to not finiding draggableId which resolves by refreshing the app page.
